@@ -1,7 +1,7 @@
 # Digital Identity Wallet - Technical Components
 
 This repository serves as an entry point to the main packages and modules used for implementing the **Wallet Solution** within the [IO app](https://github.com/pagopa/io-app).
-The Wallet Solution acts as a **Digital Identity Wallet**, compliant with the **IT-Wallet** guidelines and supporting specifications such as **OID4VCI**, **OID4VP**, and **ISO/IEC 18013-5**.
+The Wallet Solution acts as a **Digital Identity Wallet**, compliant with the **IT-Wallet** guidelines and supporting specifications such as **OID4VCI**, **OID4VP**, **ISO/IEC 18013-5** and **ISO/IEC 18013-7**.
 
 ```mermaid
 flowchart TD
@@ -92,7 +92,7 @@ The wallet is integrated into the [IO app](https://github.com/pagopa/io-app) thr
 It provides advanced functionality for:
 
 - Receiving **digital credentials** from authorized Issuers (OID4VCI)
-- Presenting credentials remotely in same and cross device flow (OID4VP)
+- Presenting credentials remotely in same and cross device flow (OID4VP and ISO/IEC 18013-7)
 - Presenting credentials in proximity (ISO/IEC 18013-5)
 - Support for credentials in SD-JWT and mDOC format
 - Validation of the trut framework (OpenID Federation)
@@ -146,9 +146,9 @@ Digital credentials are stored locally and securely using system-provided mechan
 
 ## 📡 Proximity Presentation
 
-Credential presentation in close proximity is implemented using **Bluetooth Low Energy (BLE)**, in compliance with **ISO/IEC 18013-5**, which defines secure and authenticated communication between the wallet device and verifier.
+Credential presentation in close proximity is implemented using **Bluetooth Low Energy (BLE)**, in compliance with **ISO/IEC 18013-5** and **ISO/IEC 18013-7**, which defines secure and authenticated communication between the wallet device and verifier.
 
-📦 Related package: [`pagopa/io-react-native-proximity`](https://github.com/pagopa/io-react-native-proximity): React Native module for BLE-based proximity presentation, bridging both iOS and Android ISO 18013-5 implementations.
+📦 Related package: [`pagopa/io-react-native-proximity`](https://github.com/pagopa/io-react-native-proximity): React Native module for BLE-based proximity presentation, bridging both iOS and Android ISO 18013-5 and 18013-7 implementations.
 
 ### 🧩 Native modules
 
@@ -206,4 +206,5 @@ This implementation is aligned with:
 - [OID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
 - [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
 - [ISO/IEC 18013-5](https://www.iso.org/standard/69084.html)
+- [ISO/IEC 18013-7](https://www.iso.org/standard/91154.html)
 - [IT-Wallet Technical Documentation](https://italia.github.io/eid-wallet-it-docs/versione-corrente/en/)
