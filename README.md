@@ -120,7 +120,7 @@ Furthermore, this package also contains utilities for managing cryptographic mat
 
 ---
 
-### 🔑 Integrity Check & Key Attestation
+### Integrity Check & Key Attestation
 
 To ensure runtime and device integrity:
 
@@ -133,7 +133,7 @@ Additionally, **key attestation** ensures that private keys are securely generat
 
 ---
 
-### 💾 Secure Credential Storage
+### Secure Credential Storage
 
 Digital credentials are stored locally and securely using system-provided mechanisms:
 
