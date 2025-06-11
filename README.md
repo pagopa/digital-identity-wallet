@@ -194,10 +194,10 @@ flowchart TD
      iso18013ios:::ios
      ioa:::main
 
-    classDef main fill:#bbdefb,stroke:#1e88e5,stroke-width:2px
-    classDef backend fill:#ffe082,stroke:#ffb300,stroke-width:2px
-    classDef wallet fill:#c8e6c9,stroke:#43a047,stroke-width:2px
-    classDef data fill:#b3e5fc,stroke:#039be5,stroke-width:2px
-    classDef android fill:#A4C639,stroke:#558B2F,stroke-width:2px
-    classDef ios fill:#d6d6d6,stroke:#333333,stroke-width:2px
+    classDef main fill:#bbdefb,stroke:#1e88e5,stroke-width:2px,color:#000000
+    classDef backend fill:#ffe082,stroke:#ffb300,stroke-width:2px,color:#000000
+    classDef wallet fill:#c8e6c9,stroke:#43a047,stroke-width:2px,color:#000000
+    classDef data fill:#b3e5fc,stroke:#039be5,stroke-width:2px,color:#000000
+    classDef android fill:#A4C639,stroke:#558B2F,stroke-width:2px,color:#000000
+    classDef ios fill:#d6d6d6,stroke:#333333,stroke-width:2px,color:#000000
 ```
