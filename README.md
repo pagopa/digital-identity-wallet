@@ -36,7 +36,7 @@ flowchart TD
         iso18013android["iso18013-android"]
         iso18013ios["iso18013-ios"]
   end
-    ioa["io-app"] --> iornw
+    ioa["io-app & io-eudiw-app"] --> iornw
     iornw --> iw & iornc & iorni & iornss & iornprx & iorncbor & iornjwt
     iornc --> akss & se
     akss --> TEE & StrongBox
