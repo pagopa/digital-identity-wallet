@@ -180,8 +180,8 @@ These are native implementations that handle core functionalities:
 
 Here is a list of all related repositories:
 
-- [pagopa/io-wallet](https://github.com/pagopa/io-wallet) – Main Wallet Provider backend monorepo
-- [pagopa/io-app](https://github.com/pagopa/io-app) – Main mobile app
+- [pagopa/io-wallet](https://github.com/pagopa/io-wallet) – Wallet Provider backend monorepo
+- [pagopa/io-app](https://github.com/pagopa/io-app) – IO mobile app
 - [pagopa/io-react-native-wallet](https://github.com/pagopa/io-react-native-wallet) – Main package for the Wallet Solution
 - [pagopa/io-react-native-crypto](https://github.com/pagopa/io-react-native-crypto) – Secure key management
 - [pagopa/io-react-native-integrity](https://github.com/pagopa/io-react-native-integrity) – Device and environment integrity checks
