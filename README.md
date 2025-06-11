@@ -176,12 +176,19 @@ These are native implementations that handle core functionalities:
 
 ---
 
+## 🇪🇺 Potential large scale pilot app
+
+The app created within the large scale pilot Potential by Italy can be found in the  [`pagopa/io-eudiw-app`](https://github.com/pagopa/io-eudiw-app) repo and contains new features that are still being tested before being integrated into IT-Wallet.
+
+---
+
 ## 📚 Related Repositories
 
 Here is a list of all related repositories:
 
 - [pagopa/io-wallet](https://github.com/pagopa/io-wallet) – Wallet Provider backend monorepo
 - [pagopa/io-app](https://github.com/pagopa/io-app) – IO mobile app
+- [pagopa/io-eudiw-app](https://github.com/pagopa/io-eudiw-app) – Potential EUDIW app
 - [pagopa/io-react-native-wallet](https://github.com/pagopa/io-react-native-wallet) – Main package for the Wallet Solution
 - [pagopa/io-react-native-crypto](https://github.com/pagopa/io-react-native-crypto) – Secure key management
 - [pagopa/io-react-native-integrity](https://github.com/pagopa/io-react-native-integrity) – Device and environment integrity checks
