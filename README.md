@@ -1,5 +1,77 @@
 # Digital Identity Wallet - Technical Components
 
+```mermaid
+flowchart TD
+ subgraph Wallet_Solution["Wallet Solution"]
+    direction TB
+        iornw["io-react-native-wallet"]
+        iornc["io-react-native-crypto"]
+        iorni["io-react-native-integrity"]
+        iornss["io-react-native-secure-storage"]
+        iornprx["io-react-native-proximity"]
+        iorncbor["io-react-native-cbor"]
+        iornjwt["io-react-native-jwt"]
+
+        subgraph Wallet_Provider_Backend["Wallet Provider Backend"]
+            iw["io-wallet"]
+        end
+
+  end
+
+ subgraph Native_Components["Native Components"]
+        akss["Android Keystore System"]
+        se["Secure Enclave"]
+        TEE["TEE"]
+        StrongBox["StrongBox"]
+        fbe["File-based Encryption"]
+        ks["Keychain Services"]
+        ka["Key Attestation"]
+        dc["DeviceCheck"]
+  end
+ subgraph Native_Libraries["Native Libraries"]
+        cborios["cbor-ios"]
+        iso18013android["iso18013-android"]
+        iso18013ios["iso18013-ios"]
+  end
+    ioa["io-app"] --> iornw
+    iornw --> iw & iornc & iorni & iornss & iornprx & iorncbor & iornjwt
+    iornc --> akss & se
+    akss --> TEE & StrongBox
+    iornss --> fbe & ks
+    iorni --> ka & dc
+    akss -.-> ka
+    se -.-> dc
+    iornprx --> iso18013android & iso18013ios
+    iorncbor --> cborios
+     iornw:::wallet
+     iornc:::data
+     iorni:::data
+     iornss:::data
+     iornprx:::data
+     iorncbor:::data
+     iornjwt:::data
+     iw:::backend
+     akss:::android
+     se:::ios
+     TEE:::android
+     StrongBox:::android
+     fbe:::android
+     ks:::ios
+     ka:::android
+     dc:::ios
+     cborios:::ios
+     iso18013android:::android
+     iso18013ios:::ios
+     ioa:::main
+
+    classDef main fill:#bbdefb,stroke:#1e88e5,stroke-width:2px,color:#000000
+    classDef backend fill:#ffe082,stroke:#ffb300,stroke-width:2px,color:#000000
+    classDef wallet fill:#c8e6c9,stroke:#43a047,stroke-width:2px,color:#000000
+    classDef data fill:#b3e5fc,stroke:#039be5,stroke-width:2px,color:#000000
+    classDef android fill:#A4C639,stroke:#558B2F,stroke-width:2px,color:#000000
+    classDef ios fill:#d6d6d6,stroke:#333333,stroke-width:2px,color:#000000
+```
+
 This repository serves as an entry point to the main packages and modules used for implementing the **Wallet Solution** within the [IO app](https://github.com/pagopa/io-app).
 The Wallet Solution acts as a **Digital Identity Wallet**, compliant with the **IT-Wallet** guidelines and supporting specifications such as **OID4VCI**, **OID4VP**, and **ISO/IEC 18013-5**.
 
@@ -128,76 +200,3 @@ This implementation is aligned with:
 - [OID4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
 - [ISO/IEC 18013-5](https://www.iso.org/standard/69084.html)
 - [IT-Wallet Technical Documentation](https://italia.github.io/eid-wallet-it-docs/versione-corrente/en/)
-
-
-```mermaid
-flowchart TD
- subgraph Wallet_Solution["Wallet Solution"]
-    direction TB
-        iornw["io-react-native-wallet"]
-        iornc["io-react-native-crypto"]
-        iorni["io-react-native-integrity"]
-        iornss["io-react-native-secure-storage"]
-        iornprx["io-react-native-proximity"]
-        iorncbor["io-react-native-cbor"]
-        iornjwt["io-react-native-jwt"]
-
-        subgraph Wallet_Provider_Backend["Wallet Provider Backend"]
-            iw["io-wallet"]
-        end
-
-  end
-
- subgraph Native_Components["Native Components"]
-        akss["Android Keystore System"]
-        se["Secure Enclave"]
-        TEE["TEE"]
-        StrongBox["StrongBox"]
-        fbe["File-based Encryption"]
-        ks["Keychain Services"]
-        ka["Key Attestation"]
-        dc["DeviceCheck"]
-  end
- subgraph Native_Libraries["Native Libraries"]
-        cborios["cbor-ios"]
-        iso18013android["iso18013-android"]
-        iso18013ios["iso18013-ios"]
-  end
-    ioa["io-app"] --> iornw
-    iornw --> iw & iornc & iorni & iornss & iornprx & iorncbor & iornjwt
-    iornc --> akss & se
-    akss --> TEE & StrongBox
-    iornss --> fbe & ks
-    iorni --> ka & dc
-    akss -.-> ka
-    se -.-> dc
-    iornprx --> iso18013android & iso18013ios
-    iorncbor --> cborios
-     iornw:::wallet
-     iornc:::data
-     iorni:::data
-     iornss:::data
-     iornprx:::data
-     iorncbor:::data
-     iornjwt:::data
-     iw:::backend
-     akss:::android
-     se:::ios
-     TEE:::android
-     StrongBox:::android
-     fbe:::android
-     ks:::ios
-     ka:::android
-     dc:::ios
-     cborios:::ios
-     iso18013android:::android
-     iso18013ios:::ios
-     ioa:::main
-
-    classDef main fill:#bbdefb,stroke:#1e88e5,stroke-width:2px,color:#000000
-    classDef backend fill:#ffe082,stroke:#ffb300,stroke-width:2px,color:#000000
-    classDef wallet fill:#c8e6c9,stroke:#43a047,stroke-width:2px,color:#000000
-    classDef data fill:#b3e5fc,stroke:#039be5,stroke-width:2px,color:#000000
-    classDef android fill:#A4C639,stroke:#558B2F,stroke-width:2px,color:#000000
-    classDef ios fill:#d6d6d6,stroke:#333333,stroke-width:2px,color:#000000
-```
