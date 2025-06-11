@@ -159,7 +159,7 @@ These are native implementations that handle core functionalities:
 - **iOS**
   - [`pagopa/iso18013-ios`](https://github.com/pagopa/iso18013-ios): iOS implementation of ISO 18013-5 for BLE-based credential verification.
 
-## 📡 Credentials Data format
+## ✏️ Credentials Data format
 
 The following packages are used to handle the different credential formats in SD-JWT and CBOR:
 
