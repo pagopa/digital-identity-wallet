@@ -1,5 +1,8 @@
 # Digital Identity Wallet - Technical Components
 
+This repository serves as an entry point to the main packages and modules used for implementing the **Wallet Solution** within the [IO app](https://github.com/pagopa/io-app).
+The Wallet Solution acts as a **Digital Identity Wallet**, compliant with the **IT-Wallet** guidelines and supporting specifications such as **OID4VCI**, **OID4VP**, and **ISO/IEC 18013-5**.
+
 ```mermaid
 flowchart TD
  subgraph Wallet_Solution["Wallet Solution"]
@@ -71,9 +74,6 @@ flowchart TD
     classDef android fill:#A4C639,stroke:#558B2F,stroke-width:2px,color:#000000
     classDef ios fill:#d6d6d6,stroke:#333333,stroke-width:2px,color:#000000
 ```
-
-This repository serves as an entry point to the main packages and modules used for implementing the **Wallet Solution** within the [IO app](https://github.com/pagopa/io-app).
-The Wallet Solution acts as a **Digital Identity Wallet**, compliant with the **IT-Wallet** guidelines and supporting specifications such as **OID4VCI**, **OID4VP**, and **ISO/IEC 18013-5**.
 
 ## 🚛 Backend
 
