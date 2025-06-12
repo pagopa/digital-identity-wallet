@@ -8,6 +8,9 @@ on:
       - "**"
   workflow_dispatch:
 
+env:
+  WORKING_DIR: ./website
+
 defaults:
   run:
     working-directory: ./website
@@ -16,9 +19,6 @@ jobs:
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./website
     permissions:
       contents: read
 
