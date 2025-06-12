@@ -25,10 +25,11 @@ jobs:
           fetch-depth: 0
 
       - name: Node Setup
-        uses: pagopa/dx/.github/actions/node-setup@main
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
-          working_dir: ./website
           node-version-file: "./website/.node-version"
+          cache: yarn
+          cache-dependency-path: "./website/yarn.lock"
 
       - name: Install dependencies
         run: yarn install --immutable
