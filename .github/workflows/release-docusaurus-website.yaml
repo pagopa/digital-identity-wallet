@@ -28,6 +28,7 @@ jobs:
         uses: pagopa/dx/.github/actions/node-setup@main
         with:
           working_dir: ./website
+          node-version-file: "./website/.node-version"
 
       - name: Install dependencies
         run: yarn install --immutable
