@@ -8,9 +8,6 @@ on:
       - "**"
   workflow_dispatch:
 
-env:
-  working_dir: ./website
-
 defaults:
   run:
     working-directory: ./website
@@ -29,6 +26,8 @@ jobs:
 
       - name: Node Setup
         uses: pagopa/dx/.github/actions/node-setup@main
+        with:
+          working_dir: ./website
 
       - name: Install dependencies
         run: yarn install --immutable
