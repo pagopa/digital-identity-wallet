@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  WORKING_DIR: ./website
+  working_dir: ./website
 
 defaults:
   run:
