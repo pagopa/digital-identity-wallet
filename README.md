@@ -11,7 +11,7 @@ flowchart TD
         iornc["io-react-native-crypto"]
         iorni["io-react-native-integrity"]
         iornss["io-react-native-secure-storage"]
-        iornprx["io-react-native-proximity"]
+        iornprx["io-react-native-iso18013"]
         iorncbor["io-react-native-cbor"]
         iornjwt["io-react-native-jwt"]
 
@@ -148,7 +148,7 @@ Digital credentials are stored locally and securely using system-provided mechan
 
 Credential presentation in close proximity is implemented using **Bluetooth Low Energy (BLE)**, in compliance with **ISO/IEC 18013-5** and **ISO/IEC 18013-7**, which defines secure and authenticated communication between the wallet device and verifier.
 
-📦 Related package: [`pagopa/io-react-native-proximity`](https://github.com/pagopa/io-react-native-proximity): React Native module for BLE-based proximity presentation, bridging both iOS and Android ISO 18013-5 and 18013-7 implementations.
+📦 Related package: [`pagopa/io-react-native-iso18013`](https://github.com/pagopa/io-react-native-iso18013): React Native module for BLE-based proximity presentation, bridging both iOS and Android ISO 18013-5 and 18013-7 implementations.
 
 ### 🧩 Native modules
 
@@ -193,7 +193,7 @@ Here is a list of all related repositories:
 - [pagopa/io-react-native-crypto](https://github.com/pagopa/io-react-native-crypto) – Secure key management
 - [pagopa/io-react-native-integrity](https://github.com/pagopa/io-react-native-integrity) – Device and environment integrity checks
 - [pagopa/io-react-native-secure-storage](https://github.com/pagopa/io-react-native-secure-storage) – Secure credential storage
-- [pagopa/io-react-native-proximity](https://github.com/pagopa/io-react-native-proximity) – BLE-based proximity presentation
+- [pagopa/io-react-native-iso18013](https://github.com/pagopa/io-react-native-iso18013) – BLE-based proximity presentation
 - [pagopa/io-react-native-jwt](https://github.com/pagopa/io-react-native-jwt) – JWT encoding/decoding
 - [pagopa/io-react-native-cbor](https://github.com/pagopa/io-react-native-cbor) – CBOR encoding/decoding
 
