@@ -14,6 +14,7 @@ flowchart TD
         iornprx["io-react-native-iso18013"]
         iorncbor["io-react-native-cbor"]
         iornjwt["io-react-native-jwt"]
+        iowsdk["io-wallet-sdk"]
 
         subgraph Wallet_Provider_Backend["Wallet Provider Backend"]
             iw["io-wallet"]
@@ -38,6 +39,7 @@ flowchart TD
   end
     ioa["io-app & io-eudiw-app"] --> iornw
     iornw --> iw & iornc & iorni & iornss & iornprx & iorncbor & iornjwt
+    iowsdk -.-> iw
     iornc --> akss & se
     akss --> TEE & StrongBox
     iornss --> fbe & ks
@@ -53,6 +55,7 @@ flowchart TD
      iornprx:::data
      iorncbor:::data
      iornjwt:::data
+     iowsdk:::data
      iw:::backend
      akss:::android
      se:::ios
@@ -85,6 +88,12 @@ All the backend components related to the Wallet Provider are exposed in the io-
 - `infra`: Contains infrastructure code to deploy the IO Wallet app.
 
 📦 Related package: [`pagopa/io-wallet`](https://github.com/pagopa/io-wallet)
+
+## 🧰 SDK
+
+The IO Wallet SDK provides TypeScript packages for building applications and services that interact with the IT-Wallet ecosystem, including Relying Parties, Issuers, and Wallet Providers.
+
+📦 Related package: [`pagopa/io-wallet-sdk`](https://github.com/pagopa/io-wallet-sdk)
 
 ## 📱 Mobile Integration
 
@@ -187,6 +196,7 @@ The app created within the large scale pilot Potential by Italy can be found in 
 Here is a list of all related repositories:
 
 - [pagopa/io-wallet](https://github.com/pagopa/io-wallet) – Wallet Provider backend monorepo
+- [pagopa/io-wallet-sdk](https://github.com/pagopa/io-wallet-sdk) – TypeScript SDK for IT-Wallet ecosystem integrations
 - [pagopa/io-app](https://github.com/pagopa/io-app) – IO mobile app
 - [pagopa/io-eudiw-app](https://github.com/pagopa/io-eudiw-app) – Potential EUDIW app
 - [pagopa/io-react-native-wallet](https://github.com/pagopa/io-react-native-wallet) – Main package for the Wallet Solution
