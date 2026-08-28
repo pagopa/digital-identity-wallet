@@ -38,8 +38,7 @@ flowchart TD
         iso18013ios["iso18013-ios"]
   end
     ioa["io-app & io-eudiw-app"] --> iornw
-    iornw --> iw & iornc & iorni & iornss & iornprx & iorncbor & iornjwt
-    iowsdk -.-> iw
+    iornw --> iw & iornc & iorni & iornss & iornprx & iorncbor & iornjwt & iowsdk
     iornc --> akss & se
     akss --> TEE & StrongBox
     iornss --> fbe & ks
